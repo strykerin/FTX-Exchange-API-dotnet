@@ -2,13 +2,12 @@
 using System.Net.Http.Json;
 using System.Net.Http;
 using System;
-using System.Collections.Generic;
 using System.Text;
 using System.Security.Cryptography;
 
 namespace FTX.Api.Services
 {
-    public class FTXClient
+    public class FTXClient : IFTXClient
     {
         private const string _ftxKey = "FTX-KEY";
         private const string _ftxTS = "FTX-TS";
