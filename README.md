@@ -1,1 +1,1 @@
-# FTX-Exchange-API-dotnet
+# FTX Exchange API dotnet
