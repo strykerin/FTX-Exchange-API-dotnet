@@ -2,9 +2,7 @@
 using FTX.Api.Services;
 using Microsoft.Extensions.DependencyInjection;
 using System;
-using System.Collections.Generic;
 using System.Net.Http;
-using System.Text;
 
 namespace FTX.Api.Extensions
 {
@@ -20,8 +18,11 @@ namespace FTX.Api.Extensions
 
                 return new FTXClient(httpClient, apiKey);
             });
-            services.AddScoped<>
-
+            services.AddScoped<IFTX>(ctx =>
+            {
+                IFTXClient ftxClient = ctx.GetRequiredService<IFTXClient>();
+                return new FTX(ftxClient);
+            });
         }
     }
 }
