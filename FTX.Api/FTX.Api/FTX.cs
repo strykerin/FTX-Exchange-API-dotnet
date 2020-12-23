@@ -7,7 +7,7 @@ using FTX.Api.Exceptions;
 
 namespace FTX.Api
 {
-    public class FTX
+    public class FTX : IFTX
     {
         private readonly IFTXClient _ftxClient;
         public FTX(IFTXClient ftxClient)
