@@ -1,4 +1,4 @@
-﻿namespace FTX.Api.Entities
+﻿namespace FTX.Entities
 {
     public class Response<T>
     {

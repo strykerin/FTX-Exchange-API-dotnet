@@ -1,11 +1,11 @@
 ﻿using System.Threading.Tasks;
 using System.Collections.Generic;
-using FTX.Api.Entities;
-using FTX.Api.Services;
 using System;
-using FTX.Api.Exceptions;
+using FTX.Services;
+using FTX.Entities;
+using FTX.Exceptions;
 
-namespace FTX.Api
+namespace FTX
 {
     public class FTX : IFTX
     {

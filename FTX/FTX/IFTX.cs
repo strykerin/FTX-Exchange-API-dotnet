@@ -1,8 +1,8 @@
 ﻿using System.Threading.Tasks;
 using System.Collections.Generic;
-using FTX.Api.Entities;
+using FTX.Entities;
 
-namespace FTX.Api
+namespace FTX
 {
     public interface IFTX
     {

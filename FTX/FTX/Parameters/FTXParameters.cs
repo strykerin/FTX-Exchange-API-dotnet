@@ -1,4 +1,4 @@
-﻿namespace FTX.Api.Parameters
+﻿namespace FTX.Parameters
 {
     public class FTXParameters
     {

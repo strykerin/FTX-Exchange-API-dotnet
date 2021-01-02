@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace FTX.Api.Exceptions
+namespace FTX.Exceptions
 {
     public class FTXException : Exception
     {
