@@ -3,7 +3,12 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     <Authors>strykerin</Authors>
-    <Company>strykerinstrykerin</Company>
+    <Company>strykerin</Company>
+    <Description>A high-performance .NET standard wrapper for the official FTX web API.</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageTags>FTX, cryptocurrency, exchange</PackageTags>
+    <RepositoryUrl>https://github.com/strykerin/FTX-Exchange-API-dotnet</RepositoryUrl>
+    <PackageIconUrl>https://github.com/strykerin/FTX-Exchange-API-dotnet/raw/main/FTX/images/logo.png</PackageIconUrl>
   </PropertyGroup>
 
   <ItemGroup>
