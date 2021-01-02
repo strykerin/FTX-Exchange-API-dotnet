@@ -4,6 +4,7 @@ using System.Net.Http;
 using System;
 using System.Text;
 using System.Security.Cryptography;
+using FTX.Api.Entities;
 
 namespace FTX.Api.Services
 {
@@ -15,24 +16,31 @@ namespace FTX.Api.Services
 
         private readonly HttpClient _httpClient;
         private readonly string _apiKey;
+        private readonly string _apiSecret;
 
-        public FTXClient(HttpClient httpClient, string apiKey)
+        public FTXClient(HttpClient httpClient, string apiKey, string apiSecret)
         {
             _httpClient = httpClient;
             _apiKey = apiKey;
+            _apiSecret = apiSecret;
         }
 
-        public async Task<T> GetAsync<T>(string path)
+        public async Task<Response<T>> GetAsync<T>(string path)
+        {
+            return await _httpClient.GetFromJsonAsync<Response<T>>(path);
+        }
+
+        public async Task<Response<T>> GetAuthenticatedAsync<T>(string path)
         {
             this.AddAuthentication(HttpMethod.Get.ToString(), path);
-            return await _httpClient.GetFromJsonAsync<T>(path);
+            return await _httpClient.GetFromJsonAsync<Response<T>>(path);
         }
 
         private void AddAuthentication(string httpVerb, string path)
         {
             string signature;
             long nonce;
-            using (HMACSHA256 hmac = new HMACSHA256(Encoding.UTF8.GetBytes(_apiKey)))
+            using (HMACSHA256 hmac = new HMACSHA256(Encoding.UTF8.GetBytes(_apiSecret)))
             {
                 nonce = DateTimeOffset.Now.ToUnixTimeMilliseconds();
                 string signaturePayload = $"{nonce}{httpVerb.ToUpper()}{path}";
