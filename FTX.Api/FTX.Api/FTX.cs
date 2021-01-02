@@ -58,5 +58,32 @@ namespace FTX.Api
                 throw new FTXException(ex.Message, ex);
             }
         }
+
+        public async Task<Response<List<Trade>>> GetTradesAsync(string marketName, int limit = 20, long start_time = long.MinValue, long end_time = long.MinValue)
+        {
+            try
+            {
+                if (limit > 100)
+                {
+                    throw new FTXException($"{nameof(limit)} cannot be greater than 100");
+                }
+
+                string path = $"/api/markets/{marketName}/trades?limit={limit}";
+                if (start_time != long.MinValue)
+                {
+                    path += $"&start_time={start_time}";
+                }
+                if (end_time != long.MinValue)
+                {
+                    path += $"&end_time={end_time}";
+                }
+
+                return await _ftxClient.GetAsync<List<Trade>>(path);
+            }
+            catch (Exception ex)
+            {
+                throw new FTXException(ex.Message, ex);
+            }
+        }
     }
 }
