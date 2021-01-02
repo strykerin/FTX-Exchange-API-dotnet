@@ -53,15 +53,5 @@ namespace FTX.Services
             _httpClient.DefaultRequestHeaders.Add(_ftxSignature, signature);
             _httpClient.DefaultRequestHeaders.Add(_ftxTS, nonce.ToString());
         }
-
-        Task<Response<T>> IFTXClient.GetAsync<T>(string path)
-        {
-            throw new NotImplementedException();
-        }
-
-        Task<Response<T>> IFTXClient.GetAuthenticatedAsync<T>(string path)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
