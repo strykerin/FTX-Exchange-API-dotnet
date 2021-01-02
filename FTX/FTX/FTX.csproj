@@ -9,6 +9,7 @@
     <PackageTags>FTX, cryptocurrency, exchange</PackageTags>
     <RepositoryUrl>https://github.com/strykerin/FTX-Exchange-API-dotnet</RepositoryUrl>
     <PackageIconUrl>https://github.com/strykerin/FTX-Exchange-API-dotnet/raw/main/FTX/images/logo.png</PackageIconUrl>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
