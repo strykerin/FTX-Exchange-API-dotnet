@@ -15,13 +15,12 @@ namespace FTX.Api
             _ftxClient = ftxClient;
         }
 
-        public async Task<List<Market>> GetMarketsAsync()
+        public async Task<Response<List<Market>>> GetMarketsAsync()
         {
             try
             {
-                string path = "/markets";
-                List<Market> markets = await _ftxClient.GetAsync<List<Market>>(path);
-                return markets;
+                string path = "/api/markets";
+                return await _ftxClient.GetAsync<List<Market>>(path);
             }
             catch (Exception ex)
             {
