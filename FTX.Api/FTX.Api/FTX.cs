@@ -27,5 +27,18 @@ namespace FTX.Api
                 throw new FTXException("Your message here", ex);
             }
         }
+
+        public async Task<Response<Market>> GetMarketAsync(string marketName)
+        {
+            try
+            {
+                string path = $"/api/markets/{marketName}";
+                return await _ftxClient.GetAsync<Market>(path);
+            }
+            catch (Exception ex)
+            {
+                throw new FTXException(ex.Message, ex);
+            }
+        }
     }
 }

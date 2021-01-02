@@ -7,5 +7,6 @@ namespace FTX.Api
     public interface IFTX
     {
         Task<Response<List<Market>>> GetMarketsAsync();
+        Task<Response<Market>> GetMarketAsync(string marketName);
     }
 }
