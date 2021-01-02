@@ -1,11 +1,11 @@
 ﻿using System.Net.Http.Headers;
-using FTX.Api.Parameters;
-using FTX.Api.Services;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Net.Http;
+using FTX.Parameters;
+using FTX.Services;
 
-namespace FTX.Api.Extensions
+namespace FTX.Extensions
 {
     public static class FTXExtension
     {

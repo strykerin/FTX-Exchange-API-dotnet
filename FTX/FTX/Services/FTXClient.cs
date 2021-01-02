@@ -4,9 +4,9 @@ using System.Net.Http;
 using System;
 using System.Text;
 using System.Security.Cryptography;
-using FTX.Api.Entities;
+using FTX.Entities;
 
-namespace FTX.Api.Services
+namespace FTX.Services
 {
     public class FTXClient : IFTXClient
     {

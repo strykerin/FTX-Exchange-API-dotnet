@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace FTX.Api.Entities
+namespace FTX.Entities
 {
     public class Trade
     {

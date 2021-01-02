@@ -1,7 +1,7 @@
-﻿using FTX.Api.Entities;
+﻿using FTX.Entities;
 using System.Threading.Tasks;
 
-namespace FTX.Api.Services
+namespace FTX.Services
 {
     public interface IFTXClient
     {

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FTX.Api", "FTX.Api\FTX.Api.csproj", "{24753269-F758-45CA-9C3C-5CEFBA6D6BAE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FTX", "FTX\FTX.csproj", "{36A3F74B-9BE0-40E0-8B20-CCE071AE2070}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{24753269-F758-45CA-9C3C-5CEFBA6D6BAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{24753269-F758-45CA-9C3C-5CEFBA6D6BAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{24753269-F758-45CA-9C3C-5CEFBA6D6BAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{24753269-F758-45CA-9C3C-5CEFBA6D6BAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36A3F74B-9BE0-40E0-8B20-CCE071AE2070}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36A3F74B-9BE0-40E0-8B20-CCE071AE2070}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36A3F74B-9BE0-40E0-8B20-CCE071AE2070}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36A3F74B-9BE0-40E0-8B20-CCE071AE2070}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

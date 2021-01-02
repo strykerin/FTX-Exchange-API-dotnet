@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace FTX.Api.Entities
+namespace FTX.Entities
 {
     public class OrderBook
     {
