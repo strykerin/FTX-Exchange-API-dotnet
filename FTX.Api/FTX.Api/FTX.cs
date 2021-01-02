@@ -27,5 +27,36 @@ namespace FTX.Api
                 throw new FTXException("Your message here", ex);
             }
         }
+
+        public async Task<Response<Market>> GetMarketAsync(string marketName)
+        {
+            try
+            {
+                string path = $"/api/markets/{marketName}";
+                return await _ftxClient.GetAsync<Market>(path);
+            }
+            catch (Exception ex)
+            {
+                throw new FTXException(ex.Message, ex);
+            }
+        }
+
+        public async Task<Response<OrderBook>> GetOrderBookAsync(string marketName, int depth = 20)
+        {
+            try
+            {
+                if (depth > 100)
+                {
+                    throw new FTXException($"{nameof(depth)} cannot be greater than 100");
+                }
+
+                string path = $"/api/markets/{marketName}/orderbook?depth={depth}";
+                return await _ftxClient.GetAsync<OrderBook>(path);
+            }
+            catch (Exception ex)
+            {
+                throw new FTXException(ex.Message, ex);
+            }
+        }
     }
 }

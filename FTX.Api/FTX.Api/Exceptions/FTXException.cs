@@ -7,5 +7,9 @@ namespace FTX.Api.Exceptions
         public FTXException(string message, Exception ex) : base (message, ex)
         {
         }
+
+        public FTXException(string message): base (message)
+        {
+        }
     }
 }
