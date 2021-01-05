@@ -1,2 +1,2 @@
-# FTX Exchange API dotnet
+# FTX Exchange API .NET
 # ![](./FTX/images/logo.png)
